@@ -1,0 +1,26 @@
+.featured_products {
+	margin: 100px;
+	position: relative;
+	text-align: center;
+}
+
+.featured_products_container {
+	margin-top: 50px;
+	display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: white;
+    padding: 10px;
+}
+
+.grid-item {
+	background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.product_image {
+    width: 100px;
+    height: 100px;
+}
