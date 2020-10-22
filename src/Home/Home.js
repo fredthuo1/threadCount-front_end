@@ -9,8 +9,16 @@ class Home extends Component {
 
 	render() {
 		return (
-			<div>
-				<Carousels />
+			<div className="home">
+				<Carousels className="carousel"/>
+				<div className="row"> 
+					<div className="column left">
+					</div>
+					<div className="column middle">
+					</div>
+					<div className="column right">
+					</div>
+				</div>
 				<Featured_Collections className="Featured_Products"/>
 				<Featured_Products className="Featured_Products"/>
 				<Newsletter />

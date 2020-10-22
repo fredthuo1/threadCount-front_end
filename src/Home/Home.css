@@ -1,3 +1,45 @@
 .Featured_Products {
 	height: 700px;
 }
+
+.home {
+	margin-top: 125px;
+}
+
+.carousel {
+	height: 500px;
+}
+
+.column {
+  margin-top: 80px;
+  float: left;
+  height: 370px; /* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 46%;
+  background-color: violet;
+  margin-right: 1%;
+  margin-left: 2%;
+}
+
+.middle {
+  width: 23%;
+  background-color: orange;
+  margin-right: 1%;
+  margin-left: 1%;
+}
+
+.right {
+  width: 23%;
+  background-color: red;
+  margin-right: 1%;
+  margin-left: 1%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

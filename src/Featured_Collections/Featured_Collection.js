@@ -7,11 +7,14 @@ class Featured_Collection extends Component {
 		return (
 			<div className="featured_products" >
 				<div>
-					Our products are inspired by the people and world around us. 
-					Beautiful, high quality goods that are designed especially for you. 
-					Discover our story and meet the people that make our brand what it is. 
+					<h1>Our Products</h1> 
+					Add our products to weekly line up
 				</div>
-									Featured Collections
+				<div className="buttons" > 
+					<button className="button">WOMEN SHOES</button>
+					<button className="button">WOMEN SHOES</button>
+					<button className="button">WOMEN SHOES</button>
+				</div>
 				<div className="featured_products_container">	
 					<div class="grid-item">
 						  <img className="product_image" src="https://cdn.shopify.com/s/files/1/0535/4197/products/Infamous-DNA-Sicario-PANTS-BALCK_2048x.jpg?v=1570412611" alt="Denim Jeans" />
