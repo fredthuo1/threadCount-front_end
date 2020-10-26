@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Carousels from '../Carousel/Carousels';
 import Featured_Products from '../Featured_Products/Featured_Products';
-import Featured_Collections from '../Featured_Collections/Featured_Collection';
+import Featured_Collection from '../Featured_Collections/Featured_Collection';
 import Newsletter from '../Newsletter/Newsletter';
 import './Home.css';
 
@@ -19,8 +19,7 @@ class Home extends Component {
 					<div className="column right">
 					</div>
 				</div>
-				<Featured_Collections className="Featured_Products"/>
-				<Featured_Products className="Featured_Products"/>
+				<Featured_Collection className="Featured_Collections"/>
 				<Newsletter />
 			</div>
 		)

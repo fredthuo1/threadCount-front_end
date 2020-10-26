@@ -2,8 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\Footer"
+    "\\src\\Carousel",
+    "\\src\\Featured_Collections",
+    "\\src\\Featured_Products",
+    "\\src\\Home"
   ],
-  "SelectedNode": "\\src\\Footer\\Footer.js",
+  "SelectedNode": "\\src\\Featured_Products\\Featured_Products.js",
   "PreviewInSolutionExplorer": false
 }
