@@ -4,34 +4,31 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Home from '../Home/Home';
 import Register from '../Register/Register';
 import Businesses from '../Businesses/Businesses';
-import SecondNavbar from '../Navbars/SecondNavbar';
 import Login from '../Login/Login';
-import './Navbar.css';
 
-class Navbars extends Component {
+class SecondNavbar extends Component {
 	
 
 	render() {
 		return (
         <Router>
 			<div>
-				 <Navbar sticky="top" bg="dark" className="navbar" variant="dark">
-                    <Navbar.Brand className="link" as={ Link } to="/">Home</Navbar.Brand>
+				 <Navbar bg="dark" variant="dark">
+                    <Navbar.Brand as={ Link } to="/">Home</Navbar.Brand>
                     <Nav className="mr-auto">
-                      <Nav.Link as={ Link } to= {"/" }>About Us</Nav.Link>
+                      <Nav.Link as={ Link } to= {"/Businesses" }>Businesses</Nav.Link>
                     </Nav>
-                    <Form className="search" inline>
-                      <FormControl className="searchbar" type="text" placeholder="Search" className="mr-sm-2" />
-                      <Button variant="outline-light">Search</Button>
-                    </Form>
                     <Nav className="register">
                       <Nav.Link as={ Link } to= {"/Register" }>Register</Nav.Link>
                     </Nav>
                     <Nav className="login">
                       <Nav.Link as={ Link } to= {"/Login" }>Login</Nav.Link>
                     </Nav>
+                    <Form inline>
+                      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+                      <Button variant="outline-info">Search</Button>
+                    </Form>
                   </Navbar>
-
                   <Switch>
                       <Route exact path='/' component={Home} />
                       <Route path='/Businesses' component={Businesses} />
@@ -45,4 +42,4 @@ class Navbars extends Component {
 
 }
 
-export default Navbars;
+export default SecondNavbar;

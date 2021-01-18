@@ -34,15 +34,11 @@
 	grid-area: text;
 }
 
-.carousel {
-	height: 800px;
-}
-
 .image {
 	height: 800px;
 }
 
 .card:hover {
-	transform: scale(1.2);
+	transform: scale(1);
 	box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
 }

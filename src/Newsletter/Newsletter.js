@@ -5,8 +5,10 @@ class Newsletter extends Component {
 
 	render() {
 		return (
-			<div className="Newsletter">
-				Newsletter
+			<div className="newsletter">
+				<div class="blog_one">1</div>
+				<div class="blog_two">1</div>
+				<div class="blog_three">1</div>
 			</div>
 		)
 	}

@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\Footer"
+    "\\src\\Newsletter",
+    "\\src\\Sections"
   ],
-  "SelectedNode": "\\src\\Footer\\Footer.js",
+  "SelectedNode": "\\src\\Newsletter\\Newsletter.css",
   "PreviewInSolutionExplorer": false
 }

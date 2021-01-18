@@ -9,50 +9,38 @@ class Featured_Products extends Component {
 				<div>
 					Featured Products 
 				</div>
+				<div className="row"> 
+					 <div class="column">
+                        <div class="card">
+                          <h3>Card 1</h3>
+                          <p>Some text</p>
+                          <p>Some text</p>
+                        </div>
+                     </div>
 
-				<div className="featured_products_container">	
-					<div class="grid-item">
-						  <img className="product_image" src="https://cdn.shopify.com/s/files/1/0535/4197/products/Infamous-DNA-Sicario-PANTS-BALCK_2048x.jpg?v=1570412611" alt="Denim Jeans" />
-						  <h1>Tailored Jeans</h1>
-						  <p class="price">$19.99</p>
-						  <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-						  <p><button>Add to Cart</button></p>
-					</div>
-					<div class="grid-item">
-						  <img className="product_image" src="https://cdn.shopify.com/s/files/1/0535/4197/products/Infamous-DNA-Sicario-PANTS-BALCK_2048x.jpg?v=1570412611" alt="Denim Jeans" />
-						  <h1>Tailored Jeans</h1>
-						  <p class="price">$19.99</p>
-						  <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-						  <p><button>Add to Cart</button></p>
-					</div>
-					<div class="grid-item">
-						  <img className="product_image" src="https://cdn.shopify.com/s/files/1/0535/4197/products/Infamous-DNA-Sicario-PANTS-BALCK_2048x.jpg?v=1570412611" alt="Denim Jeans" />
-						  <h1>Tailored Jeans</h1>
-						  <p class="price">$19.99</p>
-						  <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-						  <p><button>Add to Cart</button></p>
-					</div>
-					<div class="grid-item">
-						  <img className="product_image" src="https://cdn.shopify.com/s/files/1/0535/4197/products/Infamous-DNA-Sicario-PANTS-BALCK_2048x.jpg?v=1570412611" alt="Denim Jeans" />
-						  <h1>Tailored Jeans</h1>
-						  <p class="price">$19.99</p>
-						  <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-						  <p><button>Add to Cart</button></p>
-					</div>
-					<div class="grid-item">
-						  <img className="product_image" src="https://cdn.shopify.com/s/files/1/0535/4197/products/Infamous-DNA-Sicario-PANTS-BALCK_2048x.jpg?v=1570412611" alt="Denim Jeans" />
-						  <h1>Tailored Jeans</h1>
-						  <p class="price">$19.99</p>
-						  <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-						  <p><button>Add to Cart</button></p>
-					</div>
-					<div class="grid-item">
-						  <img className="product_image" src="https://cdn.shopify.com/s/files/1/0535/4197/products/Infamous-DNA-Sicario-PANTS-BALCK_2048x.jpg?v=1570412611" alt="Denim Jeans" />
-						  <h1>Tailored Jeans</h1>
-						  <p class="price">$19.99</p>
-						  <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-						  <p><button>Add to Cart</button></p>
-					</div>
+                     <div class="column">
+                        <div class="card">
+                          <h3>Card 2</h3>
+                          <p>Some text</p>
+                          <p>Some text</p>
+                        </div>
+                     </div>
+  
+                     <div class="column">
+                        <div class="card">
+                          <h3>Card 3</h3>
+                          <p>Some text</p>
+                          <p>Some text</p>
+                        </div>
+                     </div>
+  
+                      <div class="column">
+                        <div class="card">
+                          <h3>Card 4</h3>
+                          <p>Some text</p>
+                          <p>Some text</p>
+                        </div>
+                      </div>
 				</div>
 			</div>
 		)
