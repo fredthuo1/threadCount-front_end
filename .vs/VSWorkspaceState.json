@@ -2,11 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\Carousel",
-    "\\src\\Featured_Collections",
-    "\\src\\Featured_Products",
-    "\\src\\Home"
+    "\\src\\Newsletter",
+    "\\src\\Sections"
   ],
-  "SelectedNode": "\\src\\Featured_Products\\Featured_Products.js",
+  "SelectedNode": "\\src\\Newsletter\\Newsletter.css",
   "PreviewInSolutionExplorer": false
 }

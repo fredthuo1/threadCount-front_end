@@ -57,9 +57,6 @@ class Businesses extends Component {
 
 		return (
 			<div>
-                 <div className="carousel">
-                 <Carousels />
-                 </div>
 				     <CardDeck className="cardDeck">
                           { this.state.businesses.map( business => 
                               <Card className="card">

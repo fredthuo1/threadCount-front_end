@@ -1,0 +1,61 @@
+{
+  box-sizing: border-box;
+}
+
+.dealsBestSellers {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: center;
+  height: 400px; 
+  margin-top: 70px;
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 70px;
+}
+
+.hotDeals {
+  background-color: #f1f1f1;
+  padding: 20px;
+  width: 24%;
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 20px;
+  border:2px solid red;
+
+}
+
+.bestSellers {
+  padding: 20px;
+  width: 76%;
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 20px;
+  border:2px solid #f1f1f1;
+}
+
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 900px) {
+  .dealsBestSellers {
+	display: flex;
+    flex-direction: column;
+	width: 100%;
+	margin-left: 0%;
+    margin-right: 0%;
+	height: 1100px; 
+  }
+
+  .flex-item-4 {
+	margin-left: 15px;
+    margin-right: 15px;
+	flex: 14%;
+  }
+
+  .flex-item-3 {
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 15px;
+	flex: 33%;
+  }
+}

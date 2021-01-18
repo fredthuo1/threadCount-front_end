@@ -1,3 +1,31 @@
-.Newsletter {
+.newsletter {
 	text-align: center;
+	background-color: white;
+	margin: auto;
+	margin-bottom: 70px;
+	height: 200px;
+}
+
+.blog_one {
+	background-color: green;
+	margin: auto;
+	height: 170px;
+	float: left;
+	width: 28%;
+}
+
+.blog_two {
+	background-color: green;
+	margin: auto;
+	height: 170px;
+	float: middle;
+	width: 28%;
+}
+
+.blog_three {
+	background-color: green;
+	margin: auto;
+	height: 170px;
+	float: right;
+	width: 28%;
 }

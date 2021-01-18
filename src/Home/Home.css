@@ -7,40 +7,86 @@
 	margin-top: 125px;
 }
 
-.carousel {
-	height: 500px;
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: center;
+  height: 370px; 
+  margin-top: 70px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
-.column {
-  margin-top: 80px;
-  float: left;
-  height: 370px; /* Should be removed. Only for demonstration */
+.flex-item-1 {
+  background-color: #ff0000;
+  padding: 10px;
+  flex: 50%;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-.left {
-  width: 46%;
-  background-color: violet;
-  margin-right: 1%;
-  margin-left: 2%;
+.number_one_text {
+	margin-top: 30%;
 }
 
-.middle {
-  width: 23%;
-  background-color: orange;
-  margin-right: 1%;
-  margin-left: 1%;
+.image {
+	 height: 370px; 
 }
 
-.right {
-  width: 23%;
-  background-color: red;
-  margin-right: 1%;
-  margin-left: 1%;
+.number_one_button {
+	margin-top: 5%;
+	}
+
+.flex-item-2 {
+  background-color: #ff4500;
+  padding: 10px;
+  flex: 25%;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.number_two_text {
+	margin-top: 60%;
+}
+
+.number_two_button {
+	margin-top: 1%;
+}
+
+.flex-item-3 {
+  background-color: #ff7f50;
+  padding: 10px;
+  flex: 25%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 900px) {
+  .flex-container {
+	display: flex;
+    flex-direction: column;
+	width: 100%;
+	margin-left: 0%;
+    margin-right: 0%;
+	height: 1100px; 
+  }
+
+  .flex-item-1 {
+	margin-left: 15px;
+    margin-right: 15px;
+	flex: 14%;
+  }
+
+  .flex-item-2 {
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 15px;
+	flex: 33%;
+  }
+
+  .number_one {
+	padding: 20px;
+  }
 }

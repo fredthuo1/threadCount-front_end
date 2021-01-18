@@ -1,19 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Businesses from './Businesses/Businesses';
-import Home from './Home/Home';
+import App from './App';
 import Navbars from './Navbars/Navbars';
-import Footer from './Footer/Footer';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 
 
 ReactDOM.render(
   <React.StrictMode>
-        <Navbars />
-        <Home />
-        <Footer />
+        <BrowserRouter>
+            <App />
+        </ BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
