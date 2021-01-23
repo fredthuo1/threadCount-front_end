@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import Button from 'react-bootstrap/Button';
+import LosAngelesBanner from '../images/Los Angeles Banner.png'
+import NewYorkBanner from '../images/New York Banner.png'
+import StLouisBanner from '../images/St. Louis Banner.png'
 import './Carousel.css';
 
 class Carousels extends Component {
@@ -11,7 +14,7 @@ class Carousels extends Component {
               <Carousel.Item interval={1000}>
                 <img
                   className="curasel_image"
-                  src="https://cdn.pixabay.com/photo/2013/07/13/14/05/golden-gate-bridge-162096_960_720.png"
+                  src={LosAngelesBanner}
                   alt="First slide"
                 />
                 <Carousel.Caption>
@@ -23,8 +26,8 @@ class Carousels extends Component {
               <Carousel.Item interval={500}>
                 <img
                   className="curasel_image"
-                  src="https://cdn.pixabay.com/photo/2013/07/12/13/47/brooklyn-bridge-147301__340.png"
-                  alt="Third slide"
+                  src={NewYorkBanner}
+                  alt="Second slide"
                 />
                 <Carousel.Caption>
                   <h1>New York</h1>
@@ -35,7 +38,7 @@ class Carousels extends Component {
               <Carousel.Item>
                 <img
                   className="curasel_image"
-                  src="https://cdn.pixabay.com/photo/2012/04/12/19/49/gateway-arch-30374__340.png"
+                  src={StLouisBanner}
                   alt="Third slide"
                 />
                 <Carousel.Caption>

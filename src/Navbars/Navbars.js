@@ -6,6 +6,7 @@ import Register from '../Register/Register';
 import Businesses from '../Businesses/Businesses';
 import SecondNavbar from '../Navbars/SecondNavbar';
 import Login from '../Login/Login';
+import AboutUs from '../AboutUs/AboutUs';
 import './Navbar.css';
 
 class Navbars extends Component {
@@ -18,7 +19,7 @@ class Navbars extends Component {
 				 <Navbar sticky="top" bg="dark" className="navbar" variant="dark">
                     <Navbar.Brand className="link" as={ Link } to="/">Home</Navbar.Brand>
                     <Nav className="mr-auto">
-                      <Nav.Link as={ Link } to= {"/" }>About Us</Nav.Link>
+                      <Nav.Link as={ Link } to= {"/AboutUs" }>About Us</Nav.Link>
                     </Nav>
                     <Form className="search" inline>
                       <FormControl className="searchbar" type="text" placeholder="Search" className="mr-sm-2" />
@@ -34,7 +35,7 @@ class Navbars extends Component {
 
                   <Switch>
                       <Route exact path='/' component={Home} />
-                      <Route path='/Businesses' component={Businesses} />
+                      <Route path='/AboutUs' component={AboutUs} />
                       <Route path='/Register' component={Register} />
                       <Route path='/Login' component={Login} />
                   </Switch>

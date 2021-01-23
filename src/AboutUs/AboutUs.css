@@ -1,0 +1,14 @@
+.aboutUs {
+	height: 100%;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.logo_image {
+	height: 200px;
+	margin: auto;
+}
+
+.text {
+	background-color: white;
+}
