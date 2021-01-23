@@ -29,6 +29,8 @@ class Register extends Component {
 
 	handleSubmit(event) {
 		event.preventDefault();
+		var results = '';
+		var data = '';
 
 		if (this.state.password !== this.state.confirmPassword) {
 			alert("Password don't match!")
@@ -47,11 +49,15 @@ class Register extends Component {
 				.then(res => {
 					console.log(res);
 					console.log(res.data);
+					results = res;
+				})
+				.then(res => {
+					data = results.data
+					if (data === 'CONFLICT') {
+						alert("Email is already registered! Try using another email or login in with " + this.state.emailAddress)
+					}
 				})
 
-				if (res => 'CONFLICT') {
-					alert("Email is already registered! Try using another email or login in with " + this.state.emailAddress)
-				}
 		}
 	}
 	
