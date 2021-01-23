@@ -29,10 +29,13 @@ class AboutUs extends Component {
 						whether they are here to
 					</h3>
 					<h3>
-						buy, sell, 
-					</h3>	
+						buy, sell, learn
+					</h3>
 					<h3>
-						learn or teach!
+						or
+					</h3>
+					<h3>
+						teach!
 					</h3>
 				</div>
 			</div>
