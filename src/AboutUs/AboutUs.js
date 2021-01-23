@@ -17,10 +17,10 @@ class AboutUs extends Component {
 
 				<div className="text"> 
 					<h3>
-						ThreadCount provides a convenient plate form 
+						ThreadCount provides a convenient platform 
 					</h3>
 					<h3>
-						for fashin lovers 
+						for all fashion lovers 
 					</h3>
 					<h3>
 						to connect with each other, 
