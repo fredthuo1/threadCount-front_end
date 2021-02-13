@@ -1,13 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\public",
     "\\src",
-    "\\src\\Footer",
-    "\\src\\Home",
-    "\\src\\Register",
-    "\\src\\Sections"
+    "\\src\\DealsBestSellers",
+    "\\src\\Featured_Products",
+    "\\src\\Product",
+    "\\src\\Product\\AddProduct",
+    "\\src\\Register"
   ],
-  "SelectedNode": "\\src\\Register\\Register.js",
+  "SelectedNode": "\\src\\Featured_Products\\Featured_Products.js",
   "PreviewInSolutionExplorer": false
 }

@@ -7,6 +7,8 @@ import Businesses from '../Businesses/Businesses';
 import SecondNavbar from '../Navbars/SecondNavbar';
 import Login from '../Login/Login';
 import AboutUs from '../AboutUs/AboutUs';
+import Product from '../Product/Product';
+import AddProduct from '../Product/AddProduct/AddProduct';
 import './Navbar.css';
 
 class Navbars extends Component {
@@ -16,7 +18,7 @@ class Navbars extends Component {
 		return (
         <Router>
 			<div>
-				 <Navbar sticky="top" bg="dark" className="navbar" variant="dark">
+				 <Navbar className="NavBar-Container" bg="dark" expand="lg" >
                     <Navbar.Brand className="link" as={ Link } to="/">Home</Navbar.Brand>
                     <Nav className="mr-auto">
                       <Nav.Link as={ Link } to= {"/AboutUs" }>About Us</Nav.Link>
@@ -38,6 +40,8 @@ class Navbars extends Component {
                       <Route path='/AboutUs' component={AboutUs} />
                       <Route path='/Register' component={Register} />
                       <Route path='/Login' component={Login} />
+                      <Route path='/Product' component={Product} />
+                      <Route path='/AddProduct' component={AddProduct} />
                   </Switch>
 			</div>
         </Router>
