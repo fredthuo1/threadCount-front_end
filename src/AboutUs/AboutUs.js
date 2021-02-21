@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import ThreadCountBanner from '../images/ThreadCount Banner-1.png';
+import ThreadCountBanner from '../Components/Images/ThreadCount Banner-1.png';
 import './AboutUs.css';
 
-class AboutUs extends Component {
-
-	render() {
+const AboutUs = (props)=> {
 		return (
 			<div className="aboutUs">
 				<div> 
@@ -40,8 +38,6 @@ class AboutUs extends Component {
 				</div>
 			</div>
 		)
-	}
-
 }
 
 export default AboutUs;

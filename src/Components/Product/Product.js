@@ -1,21 +1,26 @@
 ﻿import React, { useState, useEffect } from 'react';
-import StarRating from 'react-bootstrap-star-rating';
-import WomanDress from '../images/WomanDress.jpg';
+import { useHistory } from "react-router-dom"
 
+
+import WomanDress from '../Images/WomanDress.jpg';
 import './Product.css';
 
-const Product = ({count, value, 
-		inactiveColor='#ddd',
-		size=24,
-		activeColor='#f00', onChange})=> {
+const Product = (props)=> {
 
-		const [products, setProducts] = useState([]);
-	
-		const stars = Array.from({length: count}, () => '🟊')
+		const history = useHistory()
+		const [product, setProduct] = useState({
+			name: '',
+			description: '',
+			size: '',
+			color: '',
+			material: '',
+			images: [],
+			originalPrice: '',
+			discountPrice: '',
+			quantity: '',
+			category: ''
+		})
 
-		const handleChange = (value) => {
-			onChange(value + 1);
-		}
 
 		return (
 			<div>
@@ -39,21 +44,20 @@ const Product = ({count, value,
 					<div className="flex-item-middle">
 						<div className="text_description">
 							<div>
-								Faxon Canvas Low-Top Sneaker
-								Inspired Slim Ankle Leg Jean
+								{ product.name }
 							</div>
 							<div>
-								$90.00
+								{ product.description }
 							</div>
 							
 							<div>
-								SKU: 0014
+								{ product.size }
 							</div>
 							<div>
-								VENDOR: Geek
+								{ product.color }
 							</div>
 							<div>
-								AVAILABILITY: In Stock
+								{ product.material }
 							</div>
 							<div>
 								SIZE: S M X XL XS
@@ -81,6 +85,11 @@ const Product = ({count, value,
 							<div>
 								TAG: Men, Blazer, Casual, Elegant
 							</div>
+						</div>
+						<div>
+							<button> Add to Cart </button >
+							<input type="number" name="quantity" />
+							<button> Add to Favorites</button >
 						</div>
 					</div>
 					<div className="flex-item-right">

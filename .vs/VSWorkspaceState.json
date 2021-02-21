@@ -2,12 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\DealsBestSellers",
-    "\\src\\Featured_Products",
-    "\\src\\Product",
-    "\\src\\Product\\AddProduct",
-    "\\src\\Register"
+    "\\src\\Components\\Product"
   ],
-  "SelectedNode": "\\src\\Featured_Products\\Featured_Products.js",
+  "SelectedNode": "\\src\\index.css",
   "PreviewInSolutionExplorer": false
 }
