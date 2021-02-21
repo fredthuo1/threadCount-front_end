@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import Button from 'react-bootstrap/Button';
-import LosAngelesBanner from '../images/Los Angeles Banner.png'
-import NewYorkBanner from '../images/New York Banner.png'
-import StLouisBanner from '../images/St. Louis Banner.png'
+import LosAngelesBanner from '../Components/Images/Los Angeles Banner.png'
+import NewYorkBanner from '../Components/Images/New York Banner.png'
+import StLouisBanner from '../Components/Images/St. Louis Banner.png'
 import './Carousel.css';
 
 class Carousels extends Component {
