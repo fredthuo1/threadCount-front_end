@@ -13,6 +13,7 @@ const Navbars = ()=> {
                     <Link style={{ color: "white" }} className="nav-link ml-3 mr-3" to="/AboutUs">About Us</Link>
                     <Link style={{ color: "white" }} className="nav-link ml-3 mr-3" to="/Login">Login</Link>
                     <Link style={{ color: "white" }} className="nav-link ml-3 mr-3 register" to="/Register">Register</Link>
+                    <Link style={{ color: "white" }} className="nav-link ml-3 mr-3 dashboard" to="/dashboard">Dashboard</Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

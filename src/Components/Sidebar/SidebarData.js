@@ -23,7 +23,7 @@ export const SidebarData = [
         path: '/overview/revenue',
         icon: <IoIcons.IoIosPaper />
       }
-    ]
+    ] 
   },
   {
     title: 'Reports',
