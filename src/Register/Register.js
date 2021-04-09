@@ -7,14 +7,13 @@ class Register extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			username: '',
 			firstName: '',
 			middleName: '',
 			lastName: '',
-			emailAddress: '',
+			email: '',
 			password: '',
 			confirmPassword: '',
-			accountType: '',
-			phoneNumber: '',
 		}
 
 		this.handleChangle = this.handleChangle.bind(this);
@@ -35,17 +34,16 @@ class Register extends Component {
 		if (this.state.password !== this.state.confirmPassword) {
 			alert("Password don't match!")
 		} else {
-			const userRegistration = {
+			const user = {
+				username: this.state.username,
 				firstName: this.state.firstName,
 				middleName: this.state.middleName,
 				lastName: this.state.lastName,
-				emailAddress: this.state.emailAddress,
+				emailAddress: this.state.email,
 				password: this.state.password,
-				accountType: this.state.accountType,
-				phoneNumber: this.state.phoneNumber
 			}
 
-			axios.post( `http://localhost:8080/registration`, userRegistration)
+			axios.post( `http://localhost:8080/register`, user)
 				.then(res => {
 					console.log(res);
 					console.log(res.data);
@@ -54,7 +52,7 @@ class Register extends Component {
 				.then(res => {
 					data = results.data
 					if (data === 'CONFLICT') {
-						alert("Email is already registered! Try using another email or login in with " + this.state.emailAddress)
+						alert("Email is already registered! Try using another email or login in with " + this.state.email)
 					}
 				})
 
@@ -66,6 +64,12 @@ class Register extends Component {
 		return (
 			<div className="register_form">
 			<Form onSubmit={ this.handleSubmit}>
+			<Form.Row>
+                <Form.Group as={Col} controlId="formGridUsername">
+                  <Form.Label>Username</Form.Label>
+                  <Form.Control type="text" name="username" placeholder="Enter username" onChange={this.handleChangle} />
+                </Form.Group>
+              </Form.Row>
              <Form.Row>
                 <Form.Group as={Col} controlId="formGridFirstName">
                   <Form.Label>First Name</Form.Label>
@@ -86,7 +90,7 @@ class Register extends Component {
               <Form.Row>
                 <Form.Group as={Col} controlId="formGridEmail">
                   <Form.Label>Email</Form.Label>
-                  <Form.Control type="email" name="emailAddress" placeholder="Enter email" onChange={this.handleChangle} />
+                  <Form.Control type="email" name="email" placeholder="Enter email" onChange={this.handleChangle} />
                 </Form.Group>
               </Form.Row>
 
@@ -104,21 +108,21 @@ class Register extends Component {
                 </Form.Group>
               </Form.Row>
 
-			  <Form.Row>
-			  <Form.Group as={Col} controlId="formGridAccountType">
-				  <Form.Label>Account Type</Form.Label>
-				  <Form.Control as="select" name="accountType" defaultValue="Business" onChange={this.handleChangle}>
-					<option name="accountType" value="Choose..." >Choose...</option>
-					<option name="accountType" value="Customer" >Customer</option>
-					<option name="accountType" value="Seller" >Business</option>
-				  </Form.Control>
-				</Form.Group>
+			{/*  <form.row>
+			  <form.group as={col} controlid="formgridaccounttype">
+				  <form.label>account type</form.label>
+				  <form.control as="select" name="accounttype" defaultvalue="business" onchange={this.handlechangle}>
+					<option name="accounttype" value="choose..." >choose...</option>
+					<option name="accounttype" value="customer" >customer</option>
+					<option name="accounttype" value="seller" >business</option>
+				  </form.control>
+				</form.group>
 
-				<Form.Group as={Col} controlId="formGridPassword">
-                  <Form.Label>Phone Number</Form.Label>
-                  <Form.Control type="number" name="phoneNumber" placeholder="Phone Number" onChange={this.handleChangle} />
-                </Form.Group>
-			  </Form.Row>
+				<form.group as={col} controlid="formgridpassword">
+                  <form.label>phone number</form.label>
+                  <form.control type="number" name="phonenumber" placeholder="phone number" onchange={this.handlechangle} />
+                </form.group>
+			  </form.row>*/}
 
 
               <Button variant="primary" type="submit">

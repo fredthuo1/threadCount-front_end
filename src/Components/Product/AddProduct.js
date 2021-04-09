@@ -1,167 +1,96 @@
-﻿import React, { Component, useEffect } from 'react';
-import axios from 'axios';
-import { Form, Col, Button } from 'react-bootstrap';
+﻿import React, {useState} from 'react'
+import Form from "react-bootstrap/Form"
+import Button from "react-bootstrap/Button"
+import axios from "axios"
+import { useHistory } from "react-router-dom"
+import Sidebar from '../Sidebar/Sidebar'; 
 
-class AddProduct extends Component { 
-		constructor(props) {
-			super(props);
-			this.state = {
-				businessName: '',
-				businessCategory: '',
-				businessDescription: '',
-				businessImages: [],
-				productsCategories: [],
-				businessOwner: '',
-				products: '',
-				businessOrders: [],
-				reviews: [],
-				invoices: [],
-				reports: []
-			}
+const AddProduct = (props) => { 
+	const history = useHistory()
+    const [form, setForm] = useState({
+        productName: "",
+        nationalDrugCode: "",
+        drugStrength: "",
+        genericCodeNum: "",
+        unitOfMeasurement: "",
+        dosage: "",
+    })
 
-			this.handleChangle = this.handleChangle.bind(this);
-			this.handleSubmit = this.handleSubmit.bind(this);
-		}
+    const handleChange = (event) => {
+        setForm({ ...form, [event.target.name]: event.target.value });
+    }
 
-		handleChangle(event) {
-				let field = event.target.name;
-				let val = event.target.value;
-				this.setState({ ...this.state, [field]: val })
-			}
+    const routeChange = () => {
+    }
 
-		handleSubmit(event) {
-				event.preventDefault();
-				var results = '';
-				var data = '';
+    const handleSubmit =(e) => {
+    }
 
-				if (this.state.password !== this.state.confirmPassword) {
-					alert("Password don't match!")
-				} else {
-					const userRegistration = {
-						firstName: this.state.firstName,
-						middleName: this.state.middleName,
-						lastName: this.state.lastName,
-						emailAddress: this.state.emailAddress,
-						password: this.state.password,
-						accountType: this.state.accountType,
-						phoneNumber: this.state.phoneNumber
-					}
-
-					axios.post( `http://localhost:8080/registration`, userRegistration)
-						.then(res => {
-							console.log(res);
-							console.log(res.data);
-							results = res;
-						})
-						.then(res => {
-							data = results.data
-							if (data === 'CONFLICT') {
-								alert("Email is already registered! Try using another email or login in with " + this.state.emailAddress)
-							}
-						})
-
-				}
-		}
-
-        
-		render() {
-
-		return (
-				<div>
-				<Form>
-                 <Form.Row>
-                    <Form.Group as={Col} controlId="formGridFirstName">
-                      <Form.Label>Product Name</Form.Label>
-                      <Form.Control type="text" placeholder="First Name" name="firstName" onChange={this.handleChangle} />
-                    </Form.Group>
-
-                    <Form.Group as={Col} controlId="formGridMiddleName">
-                      <Form.Label>Product Description</Form.Label>
-                      <Form.Control type="text" placeholder="Middle Name" name="middleName" onChange={this.handleChangle} />
-                    </Form.Group>
-
-                    <Form.Group as={Col} controlId="formGridLastName">
-                      <Form.Label>Product Size</Form.Label>
-                      <Form.Control type="text" name="lastName" placeholder="Last Name" onChange={this.handleChangle} />
-                    </Form.Group>
-                  </Form.Row>
-
-                  <Form.Row>
-                    <Form.Group as={Col} controlId="formGridEmail">
-                      <Form.Label>Product Color</Form.Label>
-                      <Form.Control type="text" name="emailAddress" placeholder="Enter email" onChange={this.handleChangle} />
-                    </Form.Group>
-                  </Form.Row>
-				  
-				  <Form.Row>
-				   <Form.Group as={Col} controlId="formGridEmail">
-                      <Form.Label>Product Material</Form.Label>
-                      <Form.Control type="text" name="emailAddress" placeholder="Enter email" onChange={this.handleChangle} />
-                    </Form.Group>
-                  </Form.Row>
-
-			       <Form.Row>
-                    <Form.Group as={Col} controlId="formGridEmail">
-                      <Form.Label>Original Price</Form.Label>
-                      <Form.Control type="text" name="emailAddress" placeholder="Enter email" onChange={this.handleChangle} />
-                    </Form.Group>
-                  
-				    <Form.Group as={Col} controlId="formGridPassword">
-                      <Form.Label>New Price</Form.Label>
-                      <Form.Control type="text" name="confirmPassword" placeholder="Confirm Password" onChange={this.handleChangle} />
-                    </Form.Group>
-                  </Form.Row>
-
-				   <Form.Row>
-				   <Form.Group as={Col} controlId="formGridEmail">
-                      <Form.Label>Quantity</Form.Label>
-                      <Form.Control type="text" name="emailAddress" placeholder="Enter email" onChange={this.handleChangle} />
-                    </Form.Group>
-                  </Form.Row>
-
-				   <Form.Row>
-				   <Form.Group as={Col} controlId="formGridEmail">
-                      <Form.Label>Product Category</Form.Label>
-                      <Form.Control type="text" name="emailAddress" placeholder="Enter email" onChange={this.handleChangle} />
-                    </Form.Group>
-                  </Form.Row>
-
-			      <Form.Row>
-			      <Form.Group as={Col} controlId="formGridAccountType">
-				      <Form.Label>Account Type</Form.Label>
-				      <Form.Control as="select" name="accountType" defaultValue="Business" onChange={this.handleChangle}>
-					    <option name="accountType" value="Choose..." >Choose...</option>
-					    <option name="accountType" value="Customer" >Customer</option>
-					    <option name="accountType" value="Seller" >Business</option>
-				      </Form.Control>
-				    </Form.Group>
-
-				    <Form.Group as={Col} controlId="formGridPassword">
-                      <Form.Label>Phone Number</Form.Label>
-                      <Form.Control type="number" name="phoneNumber" placeholder="Phone Number" onChange={this.handleChangle} />
-                    </Form.Group>
-			      </Form.Row>
-
-				<Form.Row>
-                    <Form.Group as={Col} controlId="formGridEmail">
-                      <Form.Label>Product Images</Form.Label>
-                      <Form.Control type="email" name="emailAddress" placeholder="Enter email" onChange={this.handleChangle} />
-                    </Form.Group>
-                  </Form.Row>
-
-
-                  <Button variant="primary" type="submit">
-                    Submit
-                  </Button>
-                </Form>
-				<Form>
-				  <Form.Group>
-					<Form.File id="exampleFormControlFile1" label="Example file input" />
-				  </Form.Group>
-				</Form>
-			</div>
-		)
-	}
+    return (
+        <div className="register-countainter add-product">
+            <Sidebar />
+            <Form onSubmit={handleSubmit} className="p-5">
+                <Form.Group controlId="productName">
+                    <Form.Label>Product Name</Form.Label>
+                    <Form.Control
+                        type="text"
+                        name="productName"
+                        placeholder="Enter Product Name"
+                        value={form.productName}
+                        onChange={handleChange}
+                    />
+                </Form.Group>
+                <Form.Group controlId="description">
+                    <Form.Label>Product Name</Form.Label>
+                    <Form.Control
+                        type="text"
+                        name="description"
+                        placeholder="Enter Product Description"
+                        value={form.description}
+                        onChange={handleChange}
+                    />
+                </Form.Group>
+                <Form.Group controlId="material">
+                    <Form.Label>Product Material</Form.Label>
+                    <Form.Control
+                        type="text"
+                        name="material"
+                        placeholder="Enter Product Material"
+                        value={form.material}
+                        onChange={handleChange}
+                    />
+                </Form.Group>
+                <Form.Group controlId="originalPrice">
+                    <Form.Label>Product Original Price</Form.Label>
+                    <Form.Control
+                        type="text"
+                        name="originalPrice"
+                        placeholder="Enter Product Original Price"
+                        value={form.originalPrice}
+                        onChange={handleChange}
+                    />
+                </Form.Group><Form.Group controlId="discountPrice">
+                    <Form.Label>Product Discount Price</Form.Label>
+                    <Form.Control
+                        type="text"
+                        name="discountPrice"
+                        placeholder="Enter Discounted Price"
+                        value={form.discountPrice}
+                        onChange={handleChange}
+                    />
+                </Form.Group><Form.Group controlId="quantity">
+                    <Form.Label>Product Quantity</Form.Label>
+                    <Form.Control
+                        type="text"
+                        name="quantity"
+                        placeholder="Enter Product Quantity"
+                        value={form.quantity}
+                        onChange={handleChange}
+                    />
+                </Form.Group>
+            </Form>
+        </div>
+    )
 }
 
 export default AddProduct;

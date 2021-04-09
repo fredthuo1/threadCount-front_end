@@ -12,6 +12,7 @@ class Carousels extends Component {
 		return (
 			<Carousel>
               <Carousel.Item interval={1000}>
+       
                 <img
                   className="curasel_image"
                   src={LosAngelesBanner}

@@ -5,17 +5,17 @@ import './Login.css';
 
 class Login extends Component {
 	constructor(props) {
-			super(props);
-			this.state = {
-				emailAddress: '',
-				password: '',
-			}
-
-			this.handleChangle = this.handleChangle.bind(this);
-			this.handleSubmit = this.handleSubmit.bind(this);
+		super(props);
+		this.state = {
+			username: '',
+			password: '',
 		}
 
-    handleChangle(event) {
+		this.handleChangle = this.handleChangle.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
+	}
+	
+	handleChangle(event) {
 		let field = event.target.name;
         let val = event.target.value;
         this.setState({ ...this.state, [field]: val });
@@ -23,43 +23,57 @@ class Login extends Component {
 
 	handleSubmit(event) {
 		event.preventDefault();
+		var results = '';
+		var data = '';
 
-		const login = {
-				emailAddress: this.state.emailAddress,
+		const authRequest = {
+				username: this.state.username,
 				password: this.state.password,
 		}
 
-		axios.post( `http://localhost:8080/registration`, login)
-			.then(res => {
-				console.log(res);
-				console.log(res.data);
-			})
-
-			if (res => 'CONFLICT') {
-				alert("Invalid Credentials! Try again.")
-			}
+		axios.post( `http://localhost:8080/authenticate`, authRequest)
+				.then(res => {
+					localStorage.setItem("authorization", res.data.token);
+				})
 	}
+	
 	
 
 	render() {
 		return (
 			<div className="login_form">
-			<Form>
-              <Form.Group controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
-                <Form.Text className="text-muted">
-                  We'll never share your email with anyone else.
-                </Form.Text>
-              </Form.Group>
+			<Form onSubmit={ this.handleSubmit}>
+			<Form.Row>
+                <Form.Group as={Col} controlId="formGridUsername">
+                  <Form.Label>Username</Form.Label>
+                  <Form.Control type="text" name="username" placeholder="Enter username" onChange={this.handleChangle} />
+                </Form.Group>
+            </Form.Row>
 
-              <Form.Group controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
-              </Form.Group>
-              <Form.Group controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Check me out" />
-              </Form.Group>
+			<Form.Row>
+                <Form.Group as={Col} controlId="formGridPassword">
+                  <Form.Label>Password</Form.Label>
+                  <Form.Control type="password" name="password" placeholder="Password" onChange={this.handleChangle} />
+                </Form.Group>
+			</Form.Row>
+
+			{/*  <form.row>
+			  <form.group as={col} controlid="formgridaccounttype">
+				  <form.label>account type</form.label>
+				  <form.control as="select" name="accounttype" defaultvalue="business" onchange={this.handlechangle}>
+					<option name="accounttype" value="choose..." >choose...</option>
+					<option name="accounttype" value="customer" >customer</option>
+					<option name="accounttype" value="seller" >business</option>
+				  </form.control>
+				</form.group>
+
+				<form.group as={col} controlid="formgridpassword">
+                  <form.label>phone number</form.label>
+                  <form.control type="number" name="phonenumber" placeholder="phone number" onchange={this.handlechangle} />
+                </form.group>
+			  </form.row>*/}
+
+
               <Button variant="primary" type="submit">
                 Submit
               </Button>
@@ -67,7 +81,6 @@ class Login extends Component {
 			</div>
 		)
 	}
-
 }
 
 export default Login;
