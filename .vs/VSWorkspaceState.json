@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\Components\\Product"
+    "\\src\\Carousel",
+    "\\src\\Home",
+    "\\src\\Navbars"
   ],
-  "SelectedNode": "\\src\\index.css",
+  "SelectedNode": "\\src\\App.js",
   "PreviewInSolutionExplorer": false
 }

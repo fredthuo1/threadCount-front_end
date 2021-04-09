@@ -8,6 +8,8 @@ import Login from './Login/Login';
 import AboutUs from './AboutUs/AboutUs';
 import Product from './Components/Product/Product';
 import AddProduct from './Components/Product/AddProduct';
+import Dashboard from './Components/Dashboard/Dashboard';
+import ProductsList from './Components/Dashboard/ProductsList';
 import Navbars from './Navbars/Navbars';
 import Footer from './Footer/Footer';
 import './App.css';
@@ -24,6 +26,8 @@ function App() {
         <Route path='/Login' component={Login} />
         <Route path='/Product' component={Product} />
         <Route path='/AddProduct' component={AddProduct} />
+        <Route path='/Dashboard' component={Dashboard} />
+        <Route path='/ProductsList' component={ProductsList} />
         <Footer />
     </div>
   );

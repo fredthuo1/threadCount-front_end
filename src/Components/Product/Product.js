@@ -1,4 +1,5 @@
 ﻿import React, { useState, useEffect } from 'react';
+import { GrFavorite } from 'react-icons/gr';
 import { useHistory } from "react-router-dom"
 
 
@@ -33,7 +34,7 @@ const Product = (props)=> {
 						<div className="photo">
 							<img className="product-image" src={WomanDress} alt="WomanDress" />
 						</div>
-						<div className="photo-galary">
+						<div className="photo-gallary">
 							<img className="product-gallery" src={WomanDress} alt="WomanDress" />
 							<img className="product-gallery" src={WomanDress} alt="WomanDress" />
 							<img className="product-gallery" src={WomanDress} alt="WomanDress" />
@@ -43,53 +44,43 @@ const Product = (props)=> {
 					</div>
 					<div className="flex-item-middle">
 						<div className="text_description">
-							<div>
-								{ product.name }
+							<div className="product-name">
+								{ product.name } Name Placeholder
 							</div>
-							<div>
-								{ product.description }
+							<div className="product-description">
+								{ product.description } Description Placeholder
 							</div>
 							
-							<div>
-								{ product.size }
+							<div className="product-size">
+								{ product.size } SIZE: S M X XL XS
 							</div>
-							<div>
-								{ product.color }
+							<div className="product-color">
+								{ product.color } Color Placeholder
 							</div>
-							<div>
-								{ product.material }
+							<div className="product-material">
+								{ product.material } Material Placeholder
 							</div>
-							<div>
-								SIZE: S M X XL XS
+							<div className="product-price">
+								$34
 							</div>
-							<div>
-								COLOR: 
+							<div className="more-product-description">
+								More Description
 							</div>
-							<div>
-								MATERIAL: Cotton, Wool, Silk
-							</div>
-							<div>	
-								<div className="quantity">
-									Quantity
-								</div>
-								<div className="cart">
-									Add to cart
-								</div>
-							</div>
-							<div>
-								BUY IT NOW
-							</div>
-							<div>
+							<div className="category">
 								CATEGORY: Men, Blazer
 							</div>
-							<div>
+							<div className="tags">
 								TAG: Men, Blazer, Casual, Elegant
 							</div>
+							<div className="quantity">
+								<input type="number" className="quantity-input" defaultValue="0" />
+							</div>
 						</div>
-						<div>
-							<button> Add to Cart </button >
-							<input type="number" name="quantity" />
-							<button> Add to Favorites</button >
+						<div className="buttons">
+							<div className="button-row">
+							<button className="add-to-cart"> Add to Cart </button >	
+							<GrFavorite className="add-to-favorites" />
+							</div>
 						</div>
 					</div>
 					<div className="flex-item-right">

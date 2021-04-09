@@ -1,6 +1,5 @@
 .product {
 	margin-top: 100px;
-	height: 900px;
 }
 
 .text_description {
@@ -21,51 +20,149 @@
 .flex-item-left {
   background-color: white;
   margin-right: 2%;
-  height: 600px;
   flex: 20%;
 }
 
 .photo {
 	vertical-align: top;
 	margin-bottom: 20px;
-	height: 480px;
+	margin-left: 1%;
+	margin-right: 1%;
+	height: 600px;
 }
 
-.photo-galary {
-	vertical-align: baseline;
-	height: 100px;
-	float: auto;
+.photo-gallary {
+	display: flex;
 }
 
 .product-gallery {
 	width: 18%;
 	height: 100%;
-	margin-right: auto;
+	justify-content: center;
+	margin: auto;
+}
+
+.product-gallery:hover {
+	border: 1px solid white;
 }
 
 .flex-item-middle {
-  height: 600px;
-  padding: 10px;
+  height: 800px;
+  padding-left: 10px;
+  padding-right: 10px;
   flex: 30%;
 }
 
 .flex-item-right {
   background-color: dodgerblue;
-  height: 600px;
+  height: 800px;
   margin-left: 2%;
   padding: 10px;
   flex: 20%;
 }
 
-.quantity {
-	float: left;
-}
-
-.cart {
-}
-
 .product-image {
 	height: 100%;
 	width: 100%;
+}
+
+.text_description {
+	height: 80%;
+	padding-bottom: 20px;
+	text-align: left;
+}
+
+.product-name {
+	height: 10%;
+	width: 100%;
+}
+
+.product-description {
+	height: 10%;
+	width: 100%;
+}
+
+.product-size {
+	height: 10%;
+	width: 100%;
+}
+
+.product-color {
+	height: 10%;
+	width: 100%;
+}
+
+.product-material {
+	height: 10%;
+	width: 100%;
+}
+
+.product-price {
+	height: 10%;
+	width: 100%;
+}
+
+.more-product-description {
+	height: 10%;
+	width: 100%;
+}
+
+.category {
+	height: 10%;
+	width: 100%;
+}
+
+.tags {
+	height: 10%;
+	width: 100%;
+}
+
+.quantity {
+	height: 10%;
+	width: 100%;
+}
+
+.quantity-input {
+	border-radius: 10px;
+	text-align: center;
+	width: 12%;
+}
+
+.buttons {
+	height: 20%;
+	display: flex;
+}
+
+.button-row {
+	width: 100%;
+	height: 50%;
+	display: flex;
+	margin-bottom: 10px;
+}
+
+.add-to-cart {
+	background-color: white;
+	border-radius: 10px;
+	display: flex;
+	margin: 5px;
+	height: 100%;
+	width: 80%;
+	float: left;
+	color: black;
+}
+
+.add-to-cart:hover {
+	border: 1px solid red;
+}
+
+.add-to-favorites {
+	margin: 5px;
+	height: 100%;
+	width: 15%;
+	float: right;
+}
+
+.add-to-favorites:hover {
+	padding: 1px;
 }
 
