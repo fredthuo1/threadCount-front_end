@@ -12,7 +12,6 @@ const AboutUs = (props)=> {
 					  alt="Top Banner"
 					/>
 				</div>
-
 				<div className="text"> 
 					<h3>
 						ThreadCount provides a convenient platform 

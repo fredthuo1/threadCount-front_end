@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import Button from 'react-bootstrap/Button';
-import LosAngelesBanner from '../Components/Images/Los Angeles Banner.png'
-import NewYorkBanner from '../Components/Images/New York Banner.png'
-import StLouisBanner from '../Components/Images/St. Louis Banner.png'
+import LosAngelesBanner from '../Images/Los Angeles Banner.png'
+import NewYorkBanner from '../Images/New York Banner.png'
+import { Link } from 'react-router-dom';
+import Artboard from '../Images/Artboard 4.png'
 import './Carousel.css';
 
 class Carousels extends Component {
@@ -39,13 +40,16 @@ class Carousels extends Component {
               <Carousel.Item>
                 <img
                   className="curasel_image"
-                  src={StLouisBanner}
+                  src={Artboard}
                   alt="Third slide"
                 />
                 <Carousel.Caption>
-                  <h1>St. Louis</h1>
-                  <h3>Find The Nicest Attires in St. Louis.</h3>
-                  <Button variant="warning">Warning</Button>{' '}
+                  <h1>About Us</h1>
+                  <h3>Find The Nicest Attires</h3>
+                  <Button variant="warning">
+                    <Link to="/AboutUs">About Us
+                    </Link>
+                  </Button>{' '}
                 </Carousel.Caption>
               </Carousel.Item>
             </Carousel>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {NavBar, Navbar, Form, Col, Button, FormControl, Nav, NavItem} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './Login.css';
 
@@ -73,10 +74,19 @@ class Login extends Component {
                 </form.group>
 			  </form.row>*/}
 
-
-              <Button variant="primary" type="submit">
-                Submit
-              </Button>
+			  <Form.Row>
+				<Form.Group>
+					<Link to='/ForgotPassword'>
+						Forgot Password?
+					</Link>
+				</Form.Group>
+			  </Form.Row>
+		
+			  <Form.Row>
+				<Button variant="primary" type="submit">
+					Login
+				</Button>
+			  </Form.Row>
             </Form>
 			</div>
 		)

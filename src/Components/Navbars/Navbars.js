@@ -10,10 +10,12 @@ const Navbars = ()=> {
             <Navbar.Collapse id="basic-navbar-nav" >
                 <Nav className="mr-auto">
                     <Link style={{ color: "white" }} className="nav-link ml-3 mr-3" to="/">Home</Link>
-                    <Link style={{ color: "white" }} className="nav-link ml-3 mr-3" to="/AboutUs">About Us</Link>
-                    <Link style={{ color: "white" }} className="nav-link ml-3 mr-3" to="/Login">Login</Link>
-                    <Link style={{ color: "white" }} className="nav-link ml-3 mr-3 register" to="/Register">Register</Link>
+                    <Link style={{ color: "white" }} className="nav-link ml-3 mr-3" to="/aboutUs">About Us</Link>
+                    <Link style={{ color: "white" }} className="nav-link ml-3 mr-3" to="/login">Login</Link>
+                    <Link style={{ color: "white" }} className="nav-link ml-3 mr-3 register" to="/register">Register</Link>
                     <Link style={{ color: "white" }} className="nav-link ml-3 mr-3 dashboard" to="/dashboard">Dashboard</Link>
+                    <Link style={{ color: "white" }} className="nav-link ml-3 mr-3 dashboard" to="/admindashboard">Admin Dashboard</Link>
+                    <Link style={{ color: "white" }} className="nav-link ml-3 mr-3 dashboard" to="/customerdashboard">Customer Dashboard</Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
