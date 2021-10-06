@@ -1,23 +1,22 @@
 import React from 'react';
 import {Route} from 'react-router-dom'
 
-import Home from './Home/Home';
-import Register from './Register/Register';
-import Businesses from './Businesses/Businesses';
-import Login from './Login/Login';
-import AboutUs from './AboutUs/AboutUs';
+import Home from './pages/Home/Home';
+import AboutUs from '../src/pages/AboutUs/AboutUs';
+import Register from './Components/Register/Register';
+import Login from './Components/Login/Login';
 import Product from './Components/Product/Product';
-import Dashboard from './Components/Dashboard/Dashboard';
-import AdminDashboard from './Components/AdminDashboard/AdminDashboard';
-import CustomerDashboard from './Components/CustomerDashboard/CustomerDashboard';
-import ForgotPassword from './Components/ForgotPassword/ForgotPassword';
 import AddProduct from './Components/Product/AddProduct';
+import Dashboard from './Components/Dashboard/Dashboard';
+import AdminDashboard from './pages/AdminDashboard/AdminDashboard';
+import CustomerDashboard from './Components/CustomerDashboard/CustomerDashboard';
 import ProductsList from './Components/Dashboard/ProductsList';
-import Navbars from './Navbars/Navbars';
-import Footer from './Footer/Footer';
+import ForgotPassword from './Components/ForgotPassword/ForgotPassword';
+import Navbars from './Components/Navbars/Navbars';
+import Footer from './Components/Footer/Footer';
+
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 
 function App() {
   return (

@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
-import {NavBar, Navbar, Form, Button, FormControl, Nav, NavItem} from 'react-bootstrap';
-import Home from '../Home/Home';
-import Register from '../Register/Register';
-import Businesses from '../Businesses/Businesses';
 import Featured_Collection_Nav from './Featured_Collection_Nav';
-import Login from '../Login/Login';
 import './Featured_Collection.css';
 
 class Featured_Collection extends Component {

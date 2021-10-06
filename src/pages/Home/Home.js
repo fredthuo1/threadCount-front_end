@@ -1,11 +1,11 @@
 ﻿import React, { Component } from 'react';
-import Carousels from './components/Carousel/Carousels';
-import Featured_Products from './components/Featured_Products/Featured_Products';
-import Featured_Collection from './components/Featured_Collections/Featured_Collection';
+
+import Carousels from '../../Components/Carousel/Carousels';
+import Featured_Collection from '../../Components/Featured_Collections/Featured_Collection';
+import Sections from '../../Components/Sections/Sections';
+import DealsBestSellers from '../../Components/DealsBestSellers/DealsBestSellers';
+
 import { Button } from 'react-bootstrap';
-import Newsletter from './components/Newsletter/Newsletter';
-import Sections from './components/Sections/Sections';
-import DealsBestSellers from './components/DealsBestSellers/DealsBestSellers';
 import './Home.css';
 
 class Home extends Component {

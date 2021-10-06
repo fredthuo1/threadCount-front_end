@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ThreadCountBanner from '../Components/Images/ThreadCount Banner-1.png';
+import ThreadCountBanner from '../../Components/Images/ThreadCount Banner-1.png';
 import './AboutUs.css';
 
 const AboutUs = (props)=> {
